@@ -1,0 +1,1 @@
+this directory can also be called screens if the application is a SAP

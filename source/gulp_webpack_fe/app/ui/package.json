@@ -1,0 +1,42 @@
+{
+  "name": "gulp_webpack_frontend_build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "gulp develop --require @babel/register --gulpfile gulpfile",
+    "build:dev": "gulp build_dev --require @babel/register --gulpfile gulpfile",
+    "build:prod": "gulp build_prod --require @babel/register --gulpfile gulpfile",
+    "watch:all": "gulp watch_all --require @babel/register --gulpfile gulpfile",
+    "listTasks": "gulp --require @babel/register --gulpfile gulpfile --tasks"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/register": "^7.16.9",
+    "babel-loader": "^8.2.3",
+    "dart-sass": "^1.25.0",
+    "eslint-plugin-import": "^2.25.4",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-eslint": "^4.0.2",
+    "gulp-logger": "^0.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-terser": "^2.1.0",
+    "stylelint": "^14.2.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-order": "^5.0.0",
+    "terser": "^5.10.0",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^5.66.0",
+    "webpack-manifest-plugin": "^4.1.1",
+    "webpack-stream": "^7.0.0"
+  }
+}
