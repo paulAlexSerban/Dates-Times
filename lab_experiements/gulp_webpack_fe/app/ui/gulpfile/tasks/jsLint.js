@@ -1,4 +1,4 @@
-import gulp from 'gulp'
+import gulp from 'gulp';
 import eslint from 'gulp-eslint';
 import { paths } from '../config/paths';
 
@@ -12,7 +12,7 @@ const jsLint = () => {
       console.log(`Total Warnings: ${results.warningCount}`);
       console.log(`Total Errors: ${results.errorCount}`);
   }))
-  .pipe(eslint.format())
+  .pipe(eslint.format());
 };
 
 exports.jsLint = jsLint;
