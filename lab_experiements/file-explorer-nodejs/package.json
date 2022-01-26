@@ -1,0 +1,22 @@
+{
+  "name": "file-explorer-nodejs",
+  "version": "1.0.0",
+  "description": "## `./nvmrc` - holds the minimum required NodeJS version",
+  "main": "index.js",
+  "scripts": {
+    "start": "node source/app/core/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulAlexSerban/file-explorer-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulAlexSerban/file-explorer-nodejs/issues"
+  },
+  "homepage": "https://github.com/paulAlexSerban/file-explorer-nodejs#readme",
+  "dependencies": {
+    "node": "^14.18.2"
+  }
+}
