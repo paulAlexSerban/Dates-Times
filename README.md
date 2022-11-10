@@ -6,3 +6,6 @@
 ## `./nvmrc`
 - holds the minimum required NodeJS version
 > to make sure you are using the right NodeJS version RUN: `nvm use` in the root directory of the project before you RUN `npm install`
+
+## Simply run on localhost
+- in experiment directory run: `python -m SimpleHTTPServer`
