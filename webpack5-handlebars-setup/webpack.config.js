@@ -47,6 +47,12 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.hbs$/,
+        use: [
+          "handlebars-loader"
+        ]
+      }
     ],
   },
   plugins: [
@@ -56,12 +62,13 @@ module.exports = {
     }),
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({
-      filename: (entryName) => entryName + '.html',
-      title: "Hello World of Webpack",
-      template: "index.html",
+      filename: "index.html",
+      title: "Hello World of Handlebars",
+      description: "Handlebars template description",
+      template: "src/index.hbs",
       meta: {
         viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
-        "Content-Security-Policy": { "http-equiv": "Content-Security-Policy", content: "default-src https:" },
+        "Content-Security-Policy": { "http-equiv": "Content-Security-Policy", content: "default-src http:" },
         "set-cookie": { "http-equiv": "set-cookie", content: "name=value; expires=date; path=url" },
       },
     }),
