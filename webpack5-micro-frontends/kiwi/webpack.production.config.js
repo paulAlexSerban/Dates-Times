@@ -9,7 +9,7 @@ module.exports = {
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "./dist"),
-    publicPath: "http://localhost:9002",
+    publicPath: "http://localhost:9002/",
   },
   mode: "production",
   optimization: {
@@ -71,7 +71,10 @@ module.exports = {
       name: "KiwiApp",
       filename: "remoteEntry.js",
       exposes:{
-        "./WikiImage":"./src/components/kiwi-page/kiwi-page.js"
+        "./KiwiPage":"./src/components/kiwi-page/kiwi-page.js"
+      },
+      remotes:{
+        ImageCaptionApp: "ImageCaptionApp@http://localhost:9003/remoteEntry.js"
       }
     }),
   ],
