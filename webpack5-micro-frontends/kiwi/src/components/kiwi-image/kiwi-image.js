@@ -1,7 +1,7 @@
 import Kiwi from './kiwi.jpg';
 import './kiwi-image.scss';
 
-class KiwiImage {
+export default class KiwiImage {
     render() {
         const img = document.createElement('img');
         img.src = Kiwi;
@@ -12,5 +12,3 @@ class KiwiImage {
         bodyDomElement.appendChild(img);
     }
 }
-
-export default KiwiImage;
