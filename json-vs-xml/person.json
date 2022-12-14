@@ -1,0 +1,26 @@
+{
+  "person": {
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": "20",
+    "address": {
+      "streetAddress": "21 2nd Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "postalCode": "10021"
+    },
+    "phoneNumber": [
+      {
+        "type": "home",
+        "number": "212 555-1234"
+      },
+      {
+        "type": "fax",
+        "number": "212 555-1234"
+      }
+    ],
+    "gender": {
+      "type": "male"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<person>
+  <firstName>John</firstName>
+  <lastName>Smith</lastName>
+  <age>20</age>
+  <address>
+    <streetAddress>21 2nd Street</streetAddress>
+    <city>San Francisco</city>
+    <state>CA</state>
+    <postalCode>10021</postalCode>
+  </address>
+  <phoneNumber>
+    <type>home</type>
+    <number>212 555-1234</number>
+  </phoneNumber>
+    <phoneNumber>
+    <type>fax</type>
+    <number>212 555-1234</number>
+  </phoneNumber>
+  <gender>
+    <type>male</type>
+  </gender>
+</person>
