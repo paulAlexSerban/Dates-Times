@@ -40,3 +40,4 @@ if (process.argv[2] === "deleteDirectory") {
   .then(() => console.log("directory removed"))
   .catch((err) => console.log(err));
 }
+ console.log(process.binding())
