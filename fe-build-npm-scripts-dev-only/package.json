@@ -1,0 +1,30 @@
+{
+  "name": "fe-build-npm-scripts-dev-only",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rfv dist/*",
+    "scss:watch": "sass --watch --update --style=expanded --color src/scss:dist",
+    "scss:compile": "sass --verbose  --style=expanded --color src/scss:dist",
+    "formats": "prettier --write src/**/*.js src/**/*.scss src/**/*.html",
+    "js:watch": "webpack serve --config webpack.config.js --hot",
+    "js:transpile": "export NODE_ENV=production && webpack --config webpack.config.js",
+    "build:scss": "npm run scss:compile",
+    "build:js": "npm run js:transpile",
+    "build:all": "npm run clean && npm run formats && npm run build:scss && npm run build:js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/plugin-transform-arrow-functions": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

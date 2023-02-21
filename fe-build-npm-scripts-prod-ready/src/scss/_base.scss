@@ -1,0 +1,26 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  display: grid;
+}
+
+.autoplacement-example {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+}
+
+::placeholder {
+  color: gray;
+}
+
+.image {
+  background-image: url(image@1x.png);
+}
+a {
+  transform: scale(0.5);
+}

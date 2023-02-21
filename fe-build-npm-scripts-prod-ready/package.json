@@ -1,0 +1,54 @@
+{
+  "name": "fe-build-npm-scripts-prod-ready",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean":"rm -rfv ./dist/*",
+    "formats": "npx prettier --write src/**/*.js src/**/*.scss",
+    "scss:watch": "sass --watch --update --style=expanded --color src/scss:dist",
+    "scss:compile:dev": "sass --verbose  --style=expanded --color src/scss:dist",
+    "scss:compile:prod": "sass --verbose --no-source-map --style=compressed --trace --color src/scss:dist",
+    "scss:autoprefixer": "postcss --info -r dist/*.css",
+    "js:lint": "eslint src/js/*.js --fix",
+    "js:watch": "webpack serve --config webpack.config.js --hot",
+    "js:transpile": "export NODE_ENV=production && webpack --config webpack.config.js",
+    "build:scss":"npm run scss:compile:prod && npm run scss:autoprefixer",
+    "build:js": "npm run js:lint && npm run js:transpile",
+    "build:all": "npm run clean && npm run formats && npm run build:scss & npm run build:js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/plugin-transform-arrow-functions": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.2",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "browserslist": {
+    "production": [
+      ">5%"
+    ],
+    "development": [
+      "last 10 chrome version",
+      "last 10 firefox version",
+      "last 10 safari version",
+      "last 10 ie version"
+    ]
+  }
+}
